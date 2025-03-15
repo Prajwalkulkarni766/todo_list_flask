@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}
+Update
+{% endblock %}
+{% block body %}
+<div class="container mt-5">
+  <h1 class="mb-3">Todo application</h1>
+  <form method="POST">
+    <div class="mb-3">
+      <label for="todoHeading" class="form-label">Todo heading</label>
+      <input type="text" class="form-control" id="todoHeading" name="todoHeading" value="{{ todo.title }}" required>
+    </div>
+    <div class="mb-3">
+      <label for="todoBody" class="form-label">Todo body</label>
+      <textarea style="height: 100px" class="form-control" id="todoBody" name="todoBody"
+        required>{{ todo.description }}</textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+  </form>
+</div>
+{% endblock body %}
